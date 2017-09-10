@@ -27,11 +27,13 @@ This was our first assignment on the PicoPro board, to create a funcitoning keyb
 Implementation:
 ---------------
 My implementation was two break up the alphabet, with two extra characters, into 4 rows of 7. This left we 3 buttons left to shift rows and to shift for captical and lower case letters. An internal state machine tracked which row the user is in and if the system is in shift mode, which changes between capital and lowercase letters (and for the punctuation key, switches between period and comma). The button trigger event is called on all events for the GPIO pins, but all input pins are configured to be triggered on the transition low with additional pull up resistors. The debouncing method I used was a simple time deay of 60ms, which works sufficiently well during normal operation. 
+
+The system begins in bottom row with lowercase letters. Frome there, the user can press one of the left seven buttons to output a key onto the screen, or row shift up or down to shift rows. Rows wrap around and a shifted by one per press. The laser cut cover guides the usability by letting the user mentally track row position while typing.
 ![Alt text](/Images/Schematic_TextEntry.png?raw=true "Optional Title")
 
 Construction:
 -------------
-The construction was made as a guide so the user can disambiguate his keystrokes into logical text output. The laser cutted cover was design for rapid implementation and providing functionality. It hides the majority of the circuitry for asthetic and to prevent keytyping from disturbing the circuit.  
+The construction was made as a guide so the user can disambiguate his keystrokes into logical text output. The laser cutted cover was design for rapid implementation and providing functionality. It hides the majority of the circuitry for asthetic and to prevent keytyping from disturbing the circuit.  The 10 switches fit very satisfyingly on the breadboard, so adding the cover to them leeds to clear construction. The cover is held down with double sided tape and pieces from the central cut out of the key cover.
 
 Reflection:
 -----------
