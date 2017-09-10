@@ -22,20 +22,20 @@ File Notes:
 
 Introduction:
 -------------
-This was our first assignment on the PicoPro board, to create a funcitoning keyboard with 10 switches and respective pull-up resistors, or less. I decided to take a simple approach of encoding characters as different states in a nearly full sized keyboard.
+This was our first assignment on the PicoPro board, to create a funcitoning keyboard with 10 switches and respective pull-up resistors, or less. I decided to take a simple approach of encoding characters as different states in a nearly full sized keyboard. Other options included things like a game controller, custom switches, or chording character entry. A more advanced text entry device would add either novelty or improved words per minute.
 
 Implementation:
 ---------------
+My implementation was two break up the alphabet, with two extra characters, into 4 rows of 7. This left we 3 buttons left to shift rows and to shift for captical and lower case letters. An internal state machine tracked which row the user is in and if the system is in shift mode, which changes between capital and lowercase letters (and for the punctuation key, switches between period and comma). The button trigger event is called on all events for the GPIO pins, but all input pins are configured to be triggered on the transition low with additional pull up resistors. The debouncing method I used was a simple time deay of 60ms, which works sufficiently well during normal operation. 
 ![Alt text](/Images/Schematic_TextEntry.png?raw=true "Optional Title")
 
 Construction:
 -------------
-
+The construction was made as a guide so the user can disambiguate his keystrokes into logical text output. The laser cutted cover was design for rapid implementation and providing functionality. It hides the majority of the circuitry for asthetic and to prevent keytyping from disturbing the circuit.  
 
 Reflection:
 -----------
-
-I anticipated this project to be more challenging than it turned out to be. 
+I anticipated this project to be more challenging than it turned out to be. There are multiple areas that could have been easily improved, but I did not plan on implementing them as I expected a challenge. The two main opprotunites are a more robust debouncing scheme and implementing a simple LED structure for button and row feedback.
 
 Other Photos:
 -------------
