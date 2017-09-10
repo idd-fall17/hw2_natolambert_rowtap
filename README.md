@@ -1,29 +1,52 @@
-Android Things empty project template
+Nathan Lambert HW2 -  Text Entry Device via Row Tap
 =====================================
 
-Use this empty project as a template for your Android Things project.
+![Alt text](/Images/IMG_6327.jpg?raw=true "Optional Title")
 
+A video demonstration of this project with basic commentary can be found here: https://www.youtube.com/watch?v=7OT4umnwGv4&feature=youtu.be
 
 Pre-requisites
 --------------
 
 - Android Things compatible board
 - Android Studio 2.2+
+- Circuit materials
+
+File Notes:
+-----------
+
+- Basic PicoPro App Files
+- hw2_natolambert_rowapp: extends PicoProApp to create functionality for this project.
+- Schematic_TextEntry.png: Circuit diagram with Raspberry Pi substituted for PicoPro, so the GPIO pins do not match up. See the code for which pins do what, but it is completely configurable and the functionality does not depend on intrices between digital in/out pins.
+- Illustrator_TextEntry.ai: Adobe Illustrator file for laser cutting keyboard mount.
+
+Introduction:
+-------------
+
+Implementation:
+---------------
+![Alt text](/Images/Schematic_TextEntry.png?raw=true "Optional Title")
+
+Construction:
+-------------
 
 
-Build and install
-=================
+Reflection:
+-----------
 
-On Android Studio, click on the "Run" button.
+I anticipated this project to be more challenging than it turned out to be. 
 
-If you prefer to run on the command line, type
+Other Photos:
+-------------
+![Alt text](/Images/IMG_6324.jpg?raw=true "Optional Title")
+Laser cut key guide.
+![Alt text](/Images/IMG_6325.jpg?raw=true "Optional Title")
+Underlying circuit
+![Alt text](/Images/IMG_6326.jpg?raw=true "Optional Title")
+Full system.
 
-```bash
-./gradlew installDebug
-adb shell am start com.example.androidthings.myproject/.MainActivity
-```
 
-License
+License - Copy from Class Materials
 -------
 
 Copyright 2016 The Android Open Source Project, Inc.
