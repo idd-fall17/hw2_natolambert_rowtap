@@ -22,6 +22,7 @@ File Notes:
 
 Introduction:
 -------------
+This was our first assignment on the PicoPro board, to create a funcitoning keyboard with 10 switches and respective pull-up resistors, or less. I decided to take a simple approach of encoding characters as different states in a nearly full sized keyboard.
 
 Implementation:
 ---------------
